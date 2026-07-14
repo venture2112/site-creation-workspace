@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Serenity Dental Austin</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#2A7F6E;--primary-dark:#1D5C4F;--accent:#C8A97E;--bg:#FAF8F5;--text:#3D3D3D;--white:#FFF;--light-gray:#F0EDE8;--font-heading:'Merriweather',serif;--font-body:'Inter',sans-serif;--max-width:1200px;--radius:8px;--shadow:0 2px 12px rgba(0,0,0,.08)}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.6}
+.container{max-width:var(--max-width);margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;background:var(--white);box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:100;padding:16px 0}
+header .container{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--font-heading);font-size:1.5rem;font-weight:900;color:var(--primary);text-decoration:none}
+.logo span{color:var(--accent)}
+nav{display:flex;gap:32px}
+nav a{text-decoration:none;color:var(--text);font-weight:500;font-size:.95rem;transition:color .2s}
+nav a:hover,nav a.active{color:var(--primary)}
+.btn{display:inline-block;padding:12px 28px;border-radius:var(--radius);font-weight:600;text-decoration:none;font-size:.95rem;transition:all .2s;cursor:pointer;border:none}
+.btn-primary{background:var(--primary);color:var(--white)}
+.btn-primary:hover{background:var(--primary-dark)}
+.page-header{background:linear-gradient(135deg,var(--primary-dark),var(--primary));color:var(--white);padding:60px 0;text-align:center}
+.page-header h1{font-family:var(--font-heading);font-size:clamp(2rem,4vw,2.5rem)}
+.page-header p{opacity:.85;margin-top:8px;font-size:1.1rem}
+section{padding:80px 0}
+.section-title{font-family:var(--font-heading);font-size:clamp(1.5rem,3vw,2rem);text-align:center;margin-bottom:8px}
+.section-subtitle{text-align:center;color:#666;margin-bottom:40px;font-size:1.05rem}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.two-col img{width:100%;border-radius:var(--radius);background:var(--light-gray);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;color:#999}
+.two-col h2{font-family:var(--font-heading);font-size:1.5rem;margin-bottom:16px}
+.two-col p{color:#555;margin-bottom:12px}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.value-card{background:var(--white);padding:32px;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center}
+.value-card .icon{font-size:2.5rem;margin-bottom:12px}
+.value-card h3{font-family:var(--font-heading);font-size:1.1rem;margin-bottom:8px}
+.value-card p{font-size:.9rem;color:#666}
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
+.team-card{display:flex;gap:24px;background:var(--white);padding:32px;border-radius:var(--radius);box-shadow:var(--shadow)}
+.team-photo{width:120px;height:120px;border-radius:50%;background:var(--light-gray);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#999;font-size:.8rem}
+.team-info h3{font-family:var(--font-heading);font-size:1.15rem;margin-bottom:2px}
+.team-info .creds{color:var(--primary);font-weight:600;font-size:.9rem;margin-bottom:8px}
+.team-info p{font-size:.9rem;color:#666}
+footer{background:var(--primary-dark);color:rgba(255,255,255,.8);padding:60px 0 32px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:40px}
+footer h4{font-family:var(--font-heading);color:var(--white);margin-bottom:16px;font-size:1rem}
+footer a{color:rgba(255,255,255,.7);text-decoration:none;display:block;margin-bottom:8px;font-size:.9rem}
+footer a:hover{color:var(--white)}
+footer .logo{color:var(--white);margin-bottom:12px;display:block}
+footer .logo span{color:var(--accent)}
+footer p{font-size:.9rem;margin-bottom:16px}
+.footer-bottom{margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.15);text-align:center;font-size:.85rem;opacity:.7}
+@media(max-width:900px){nav{display:none}.two-col{grid-template-columns:1fr}.values-grid{grid-template-columns:1fr}.team-grid{grid-template-columns:1fr}.team-card{flex-direction:column;align-items:center;text-align:center}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){section{padding:48px 0}.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="container">
+<a href="/" class="logo">Serenity<span> Dental</span></a>
+<nav><a href="/">Home</a><a href="/about" class="active">About</a><a href="/services">Services</a><a href="/gallery">Gallery</a><a href="/contact">Contact</a></nav>
+<a href="#" class="btn btn-primary">Book Appointment</a>
+</div></header>
+
+<section class="page-header">
+<div class="container">
+<h1>About Serenity Dental</h1>
+<p>Comfortable, expert care in the heart of Austin since 2010.</p>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="two-col">
+<div>
+<h2>Our Practice</h2>
+<p>Serenity Dental was founded on a simple belief: going to the dentist shouldn't be something you dread. Dr. Priya Nair and Dr. Michael Rao created a practice where advanced dentistry meets genuine comfort — from the warm blankets and noise-cancelling headphones to the chairside manner that puts even the most anxious patients at ease.</p>
+<p>With over 15 years of combined experience and thousands of happy smiles, we've built a reputation for exceptional cosmetic and general dentistry in a stress-free environment.</p>
+</div>
+<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&q=80" alt="Modern dental office" class="hero-img" style="object-fit:cover">
+</div>
+</div>
+</section>
+
+<section style="background:var(--white)">
+<div class="container">
+<h2 class="section-title">Our Values</h2>
+<p class="section-subtitle">The principles that guide every smile we create.</p>
+<div class="values-grid">
+<div class="value-card"><div class="icon">🫶</div><h3>Comfort First</h3><p>Every aspect of our practice is designed to make you feel at ease — from sedation options to our calming office environment.</p></div>
+<div class="value-card"><div class="icon">🔬</div><h3>Clinical Excellence</h3><p>We invest in the latest technology and continuing education so you always receive the best care available.</p></div>
+<div class="value-card"><div class="icon">🤝</div><h3>Transparent Trust</h3><p>No hidden fees, no pressure. We explain every option and let you make the decision that's right for you.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="section-title">Meet Your Doctors</h2>
+<p class="section-subtitle">Experienced, compassionate, and committed to your comfort.</p>
+<div class="team-grid">
+<div class="team-card">
+<img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&q=80" alt="Dr. Priya Nair" class="team-photo" style="object-fit:cover;border-radius:50%">
+<div class="team-info"><h3>Dr. Priya Nair, DDS</h3><p class="creds">Lead Cosmetic Dentist | 12 years experience</p><p>Dr. Nair is a graduate of UT Health San Antonio Dental School and completed advanced training in cosmetic and restorative dentistry at the Las Vegas Institute. She believes every patient deserves a smile they're excited to share with the world.</p></div>
+</div>
+<div class="team-card">
+<img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&q=80" alt="Dr. Michael Rao" class="team-photo" style="object-fit:cover;border-radius:50%">
+<div class="team-info"><h3>Dr. Michael Rao, DMD</h3><p class="creds">General & Sedation Dentistry | 10 years experience</p><p>Dr. Rao earned his DMD from Tufts University and specializes in anxiety-free care and complex restorative cases. He has advanced certification in IV sedation and is known for his gentle touch.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div><a href="/" class="logo">Serenity<span> Dental</span></a><p>Comfortable, premium dental care in Austin, TX.</p></div>
+<div><h4>Quick Links</h4><a href="/">Home</a><a href="/about">About Us</a><a href="/services">Services</a><a href="/gallery">Gallery</a><a href="/contact">Contact</a></div>
+<div><h4>Services</h4><a href="#">General Dentistry</a><a href="#">Cosmetic Dentistry</a><a href="#">Invisalign</a><a href="#">Restorative</a><a href="#">Sedation Dentistry</a><a href="#">Emergency Care</a></div>
+<div><h4>Contact</h4><p>1234 Serenity Lane<br>Austin, TX 78701</p><p>📞 (512) 555-0142<br>✉️ hello@serenitydentalaustin.com</p></div>
+</div>
+<div class="footer-bottom">© 2026 Serenity Dental Austin. All rights reserved.</div>
+</div>
+</footer>
+</body>
+</html>
