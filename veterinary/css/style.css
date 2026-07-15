@@ -432,7 +432,9 @@ h5 { font-size: 1.1rem; }
   min-height: 85vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 50%, var(--primary-dark) 100%);
+  background: linear-gradient(rgba(26,26,46,0.7), rgba(26,26,46,0.7)), url('https://picsum.photos/seed/vet-hero/1920/800');
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
   padding: 120px 0 80px;
 }
@@ -520,7 +522,9 @@ h5 { font-size: 1.1rem; }
 .subpage-hero {
   position: relative;
   padding: 100px 0 60px;
-  background: linear-gradient(135deg, var(--dark) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(rgba(26,26,46,0.75), rgba(26,26,46,0.75)), url('https://picsum.photos/seed/vet-subpage-hero/1920/600');
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
@@ -674,9 +678,21 @@ h5 { font-size: 1.1rem; }
 
 .service-card-image {
   position: relative;
-  height: 220px;
+  height: 200px;
   overflow: hidden;
   background: var(--primary-10);
+}
+
+.service-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  transition: var(--transition-slow);
+}
+
+.service-card:hover .service-card-image img {
+  transform: scale(1.08);
 }
 
 .service-card-image .placeholder-img {
@@ -790,6 +806,13 @@ h5 { font-size: 1.1rem; }
   overflow: hidden;
   border: 4px solid var(--cream);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .team-photo svg {
@@ -912,6 +935,14 @@ h5 { font-size: 1.1rem; }
   justify-content: center;
   border: 3px solid var(--white);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.testimonial-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .testimonial-photo svg {
@@ -1031,7 +1062,9 @@ h5 { font-size: 1.1rem; }
 /* ----- CTA Section ----- */
 .cta-section {
   padding: 100px 0;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(rgba(15,118,110,0.85), rgba(11,94,87,0.85)), url('https://picsum.photos/seed/vet-cta/1920/800');
+  background-size: cover;
+  background-position: center;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -1246,6 +1279,13 @@ h5 { font-size: 1.1rem; }
   position: relative;
 }
 
+.about-story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+}
+
 .about-story-image svg {
   width: 100px;
   height: 100px;
@@ -1350,17 +1390,29 @@ h5 { font-size: 1.1rem; }
   font-size: 0.9rem;
   transition: var(--transition);
   cursor: pointer;
+  position: relative;
+}
+
+.facility-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.facility-item span {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.9);
+  padding: 6px 16px;
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(2px);
 }
 
 .facility-item:hover {
   transform: scale(1.03);
   box-shadow: var(--shadow-hover);
-}
-
-.facility-item svg {
-  width: 48px;
-  height: 48px;
-  color: var(--primary-40);
 }
 
 .facility-item:first-child {
@@ -1541,6 +1593,13 @@ h5 { font-size: 1.1rem; }
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.service-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
 }
 
 .service-detail-image svg {

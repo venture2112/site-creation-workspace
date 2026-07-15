@@ -239,13 +239,8 @@ document.addEventListener('DOMContentLoaded', () => {
           if (filter === 'all') {
             card.classList.remove('hidden');
           } else {
-            const tag = card.querySelector('.project-tag');
-            if (tag) {
-              const category = tag.textContent.trim().toLowerCase();
-              card.classList.toggle('hidden', !category.includes(filter));
-            } else {
-              card.classList.add('hidden');
-            }
+            const category = card.getAttribute('data-category');
+            card.classList.toggle('hidden', category !== filter);
           }
         });
       });

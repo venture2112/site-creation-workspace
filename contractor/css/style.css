@@ -291,7 +291,9 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
   min-height: 90vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-2) 40%, #0c1a3a 100%);
+  background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), url('https://picsum.photos/seed/industrial-hero/1920/800');
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
 }
 
@@ -443,13 +445,25 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
   background: var(--color-white);
   border: 1px solid var(--color-gray);
   border-radius: var(--radius-md);
-  padding: 2.5rem 2rem;
+  padding: 0;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
 }
 
-.service-card::before {
+.service-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 3px solid var(--color-steel-blue);
+}
+
+.service-card-body {
+  padding: 2.5rem 2rem;
+}
+
+.service-card-body::before {
   content: '';
   position: absolute;
   top: 0;
@@ -459,9 +473,9 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
   transition: var(--transition);
 }
 
-.service-card.hvac::before { background: var(--color-steel-blue); }
-.service-card.plumbing::before { background: var(--color-orange); }
-.service-card.electrical::before { background: var(--color-yellow); }
+.service-card.hvac .service-card-body::before { background: var(--color-steel-blue); }
+.service-card.plumbing .service-card-body::before { background: var(--color-orange); }
+.service-card.electrical .service-card-body::before { background: var(--color-yellow); }
 
 .service-card:hover {
   transform: translateY(-6px);
@@ -472,6 +486,10 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
 .service-card:hover.hvac { border-color: var(--color-steel-blue); }
 .service-card:hover.plumbing { border-color: var(--color-orange); }
 .service-card:hover.electrical { border-color: var(--color-yellow); }
+
+.service-card-img + .service-card-body .service-icon {
+  margin-top: -1.5rem;
+}
 
 .service-icon {
   width: 56px;
@@ -542,7 +560,6 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
 .project-image {
   width: 100%;
   height: 220px;
-  background: linear-gradient(135deg, var(--color-dark-2), var(--color-dark-3));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -551,6 +568,18 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
   font-size: 0.875rem;
   position: relative;
   overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
 }
 
 .project-image .overlay {
@@ -629,7 +658,9 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
 
 /* ============ CTA BANNER ============ */
 .cta-banner {
-  background: linear-gradient(135deg, var(--color-dark-2), var(--color-dark));
+  background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)), url('https://picsum.photos/seed/contractor-cta/1920/600');
+  background-size: cover;
+  background-position: center;
   position: relative;
   overflow: hidden;
 }
@@ -715,7 +746,9 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
 
 /* ============ SUBPAGE HERO ============ */
 .subpage-hero {
-  background: linear-gradient(135deg, var(--color-dark), var(--color-dark-2));
+  background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)), url('https://picsum.photos/seed/contractor-subpage/1920/600');
+  background-size: cover;
+  background-position: center;
   padding: 5rem 0 3.5rem;
   position: relative;
   overflow: hidden;
@@ -807,13 +840,22 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
 .about-image {
   width: 100%;
   height: 400px;
-  background: linear-gradient(135deg, var(--color-dark-2), var(--color-dark-3));
   border-radius: var(--radius-md);
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-gray);
   font-family: var(--font-heading);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-md);
+  border: 3px solid var(--color-steel-blue);
 }
 
 .stats-grid {
@@ -873,13 +915,26 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
 .team-photo {
   width: 100%;
   height: 240px;
-  background: linear-gradient(135deg, var(--color-dark-2), var(--color-dark-3));
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-gray);
   font-family: var(--font-heading);
   font-size: 0.875rem;
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-bottom: 3px solid var(--color-steel-blue);
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-photo img {
+  transform: scale(1.05);
 }
 
 .team-info { padding: 1.5rem; }
@@ -1085,6 +1140,51 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
   font-family: var(--font-heading);
   gap: 0.5rem;
   margin-top: 2rem;
+}
+
+/* ============ IMAGE STYLES ============ */
+.service-category-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 3px solid var(--color-steel-blue);
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.community-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 3px solid var(--color-steel-blue);
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.emergency-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.emergency-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(220,38,38,0.92), rgba(220,38,38,0.92)), url('https://picsum.photos/seed/emergency-response/1920/200');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.emergency-bg > * {
+  position: relative;
+  z-index: 2;
+}
+
+img[loading="lazy"] {
+  object-fit: cover;
 }
 
 /* ============ SCROLL REVEAL ============ */

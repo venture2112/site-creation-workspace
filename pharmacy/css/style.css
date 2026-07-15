@@ -324,7 +324,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-light) 50%, var(--color-navy-mid) 100%);
+  background-image: linear-gradient(rgba(10,22,40,0.75), rgba(10,22,40,0.75)), url('https://picsum.photos/seed/pharmacy-hero/1920/800');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .hero-bg::after {
   content: '';
@@ -539,6 +542,22 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
 .card-link:hover::after {
   transform: translateX(4px);
 }
+.service-card__image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  margin: -2.25rem -2.25rem 1.5rem;
+}
+.service-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.card:hover .service-card__image img {
+  transform: scale(1.05);
+}
 
 /* --- Features (Why Choose Us) --- */
 .features-grid {
@@ -623,6 +642,16 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
   font-size: 0.85rem;
   color: var(--color-warm-gray-400);
 }
+.testimonial__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  display: block;
+  border: 3px solid var(--color-teal);
+  box-shadow: var(--shadow-sm);
+}
 .carousel-controls {
   display: flex;
   justify-content: center;
@@ -671,7 +700,10 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
 
 /* --- CTA Section --- */
 .cta-section {
-  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-teal-dark) 100%);
+  background-image: linear-gradient(rgba(10,22,40,0.85), rgba(13,148,136,0.85)), url('https://picsum.photos/seed/pharmacy-cta/1920/600');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 5rem 0;
   text-align: center;
   position: relative;
@@ -734,6 +766,12 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
   width: 80px;
   height: 80px;
   fill: var(--color-warm-gray-300);
+}
+.service-block-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .service-block-content h2 {
   margin-bottom: 1rem;
@@ -833,13 +871,22 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
 }
 .bio-image {
   width: 100%;
-  aspect-ratio: 1;
+  max-width: 400px;
+  aspect-ratio: 4/5;
   border-radius: var(--radius-md);
   background: var(--color-warm-gray-200);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+.about__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  display: block;
 }
 .bio-image .placeholder {
   text-align: center;
@@ -967,6 +1014,22 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
   color: var(--color-warm-gray-500);
   font-size: 0.9rem;
 }
+.community-card__image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  margin: -2rem -2rem 1.5rem;
+}
+.community-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.community-card:hover .community-card__image img {
+  transform: scale(1.05);
+}
 
 /* --- Contact Page --- */
 .contact-grid {
@@ -1086,7 +1149,9 @@ h4 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
 .map-placeholder {
   width: 100%;
   height: 220px;
-  background: var(--color-warm-gray-100);
+  background-image: linear-gradient(rgba(10,22,40,0.05), rgba(10,22,40,0.05)), url('https://picsum.photos/seed/map-texture/800/400');
+  background-size: cover;
+  background-position: center;
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
