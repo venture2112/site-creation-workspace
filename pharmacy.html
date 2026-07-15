@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WellSpring Pharmacy — Independent Compounding Pharmacy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-primary: #0D9488;
+    --color-primary-dark: #0F766E;
+    --color-primary-light: #CCFBF1;
+    --color-accent: #D97706;
+    --header-bg: #1A2332;
+    --footer-bg: #1A2332;
+    --text-dark: #1F2937;
+    --text-muted: #6B7280;
+    --bg-warm: #FEF9EF;
+    --bg-white: #FFFFFF;
+    --radius: 12px;
+    --shadow: 0 4px 24px rgba(0,0,0,0.06);
+    --font: 'Inter', system-ui, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font); color: var(--text-dark); background: var(--bg-white); line-height: 1.6; }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+  /* Header */
+  .site-header { background: var(--header-bg); color: #fff; padding: 0 0; position: sticky; top: 0; z-index: 100; }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .logo { font-weight: 800; font-size: 1.35rem; color: #fff; text-decoration: none; letter-spacing: -0.5px; }
+  .logo span { color: var(--color-primary); }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { color: #CBD5E1; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: #fff; }
+  .nav-cta { background: var(--color-primary); color: #fff; padding: 8px 20px; border-radius: 8px; font-weight: 600; font-size: 0.85rem; text-decoration: none; transition: background .2s; }
+  .nav-cta:hover { background: var(--color-primary-dark); }
+  .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; padding: 4px; }
+
+  /* Hero */
+  .hero { background: linear-gradient(135deg, var(--header-bg) 0%, #1e3a5f 100%); color: #fff; padding: 80px 0 72px; text-align: center; }
+  .hero h1 { font-size: 2.75rem; font-weight: 800; line-height: 1.15; max-width: 700px; margin: 0 auto 16px; }
+  .hero p { font-size: 1.1rem; color: #94A3B8; max-width: 560px; margin: 0 auto 36px; }
+  .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 14px 32px; border-radius: 10px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: all .2s; border: none; cursor: pointer; }
+  .btn-primary { background: var(--color-primary); color: #fff; }
+  .btn-primary:hover { background: var(--color-primary-dark); transform: translateY(-1px); }
+  .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.25); }
+  .btn-outline:hover { border-color: var(--color-primary); background: rgba(13,148,136,0.1); }
+  .btn-accent { background: var(--color-accent); color: #fff; }
+  .btn-accent:hover { background: #B45309; transform: translateY(-1px); }
+
+  /* Sections */
+  section { padding: 72px 0; }
+  .section-title { font-size: 2rem; font-weight: 700; text-align: center; margin-bottom: 12px; }
+  .section-sub { text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 44px; font-size: 1.05rem; }
+  .section-alt { background: var(--bg-warm); }
+
+  /* Services Grid */
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+  .service-card { background: var(--bg-white); border-radius: var(--radius); padding: 32px 24px; box-shadow: var(--shadow); text-align: center; transition: transform .2s; }
+  .service-card:hover { transform: translateY(-4px); }
+  .service-icon { width: 52px; height: 52px; background: var(--color-primary-light); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 1.5rem; color: var(--color-primary); }
+  .service-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+  .service-card p { font-size: 0.9rem; color: var(--text-muted); }
+
+  /* About */
+  .about-wrap { display: flex; gap: 48px; align-items: center; }
+  .about-photo { width: 200px; height: 200px; border-radius: 50%; background: #E5E7EB; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #9CA3AF; font-size: 0.85rem; }
+  .about-text h3 { font-size: 1.3rem; margin-bottom: 4px; }
+  .about-text .creds { color: var(--color-primary); font-weight: 600; margin-bottom: 16px; display: block; }
+  .about-text p { color: var(--text-muted); line-height: 1.7; }
+
+  /* Insurance */
+  .insurance-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; }
+  .insurance-item { background: var(--bg-white); border: 1px solid #E5E7EB; border-radius: 10px; padding: 24px 16px; text-align: center; color: var(--text-muted); font-size: 0.85rem; font-weight: 500; }
+  .insurance-item .logo-placeholder { width: 80px; height: 40px; background: #F3F4F6; border-radius: 6px; margin: 0 auto 8px; display: flex; align-items: center; justify-content: center; color: #D1D5DB; font-size: 0.65rem; }
+
+  /* Forms */
+  .form-card { background: var(--bg-white); border-radius: var(--radius); padding: 36px; box-shadow: var(--shadow); max-width: 560px; margin: 0 auto; }
+  .form-card label { display: block; font-weight: 500; font-size: 0.9rem; margin-bottom: 4px; color: var(--text-dark); }
+  .form-card input, .form-card select, .form-card textarea { width: 100%; padding: 11px 14px; border: 1px solid #D1D5DB; border-radius: 8px; font-size: 0.95rem; font-family: var(--font); margin-bottom: 16px; transition: border .2s; }
+  .form-card input:focus, .form-card select:focus, .form-card textarea:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--color-primary-light); }
+  .form-card textarea { resize: vertical; min-height: 90px; }
+  .form-card .btn { width: 100%; margin-top: 4px; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .contact-info h3 { font-size: 1.1rem; margin-bottom: 16px; }
+  .contact-info p { color: var(--text-muted); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+  .contact-info .icon { width: 20px; text-align: center; }
+  .map-placeholder { width: 100%; height: 220px; background: #E5E7EB; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: #9CA3AF; font-size: 0.9rem; margin-top: 20px; }
+
+  /* Footer */
+  .site-footer { background: var(--footer-bg); color: #94A3B8; padding: 48px 0 32px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; }
+  .footer-grid h4 { color: #fff; font-size: 0.95rem; margin-bottom: 14px; }
+  .footer-grid ul { list-style: none; }
+  .footer-grid ul li { margin-bottom: 8px; }
+  .footer-grid ul a { color: #94A3B8; text-decoration: none; font-size: 0.85rem; transition: color .2s; }
+  .footer-grid ul a:hover { color: #fff; }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; margin-top: 36px; text-align: center; font-size: 0.8rem; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links { display: none; flex-direction: column; background: var(--header-bg); position: absolute; top: 68px; left: 0; right: 0; padding: 16px 24px; gap: 16px; }
+    .nav-links.open { display: flex; }
+    .menu-toggle { display: block; }
+    .nav-cta { display: none; }
+    .hero h1 { font-size: 2rem; }
+    .hero { padding: 56px 0 48px; }
+    .about-wrap { flex-direction: column; text-align: center; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    section { padding: 48px 0; }
+  }
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 1.65rem; }
+    .section-title { font-size: 1.5rem; }
+    .form-card { padding: 24px; }
+    .footer-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="logo">Well<span>Spring</span> Pharmacy</a>
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#insurance">Insurance</a></li>
+      <li><a href="#refill">Refill</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#transfer" class="nav-cta">Transfer Rx</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Your Neighborhood Compounding Pharmacy</h1>
+    <p>Personalized medications, free delivery, and care you can count on — from your locally owned independent pharmacy.</p>
+    <div class="hero-btns">
+      <a href="#refill" class="btn btn-primary">Request Refill</a>
+      <a href="#transfer" class="btn btn-outline">Transfer Prescription</a>
+      <a href="#contact" class="btn btn-outline">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-sub">From custom compounding to free same-day delivery — we make getting your medication easy.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">⚗️</div>
+        <h3>Compounding</h3>
+        <p>Custom medications tailored to your unique dosage, flavor, or allergen needs.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🩺</div>
+        <h3>DME &amp; Supplies</h3>
+        <p>Walkers, CPAP supplies, diabetes testing, and more — billed to your insurance.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💉</div>
+        <h3>Immunizations</h3>
+        <p>Flu shots, COVID boosters, shingles, pneumonia — walk-ins welcome.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚚</div>
+        <h3>Free Delivery</h3>
+        <p>Same-day delivery within [City] city limits. No minimum, no fee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Meet Your Pharmacist</h2>
+    <p class="section-sub">Get to know the professional behind the counter.</p>
+    <div class="about-wrap">
+      <div class="about-photo">[Photo]</div>
+      <div class="about-text">
+        <h3>Dr. Sarah Mitchell, PharmD</h3>
+        <span class="creds">Owner &amp; Pharmacist-in-Charge</span>
+        <p>Dr. Mitchell has served the [City] community for over 14 years. After 8 years with a national chain, she opened WellSpring Pharmacy to bring personalized care back to the neighborhood. She is certified in compounding, immunizations, and diabetes education.</p>
+        <p style="margin-top:12px">"I believe every patient deserves to know their pharmacist by name. We're here for you — not for a corporation."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="insurance">
+  <div class="container">
+    <h2 class="section-title">Insurance Plans We Accept</h2>
+    <p class="section-sub">Most major plans accepted. Don't see yours? Give us a call.</p>
+    <div class="insurance-grid">
+      <div class="insurance-item"><div class="logo-placeholder">[Logo]</div>Caremark</div>
+      <div class="insurance-item"><div class="logo-placeholder">[Logo]</div>Express Scripts</div>
+      <div class="insurance-item"><div class="logo-placeholder">[Logo]</div>Optum Rx</div>
+      <div class="insurance-item"><div class="logo-placeholder">[Logo]</div>Humana</div>
+      <div class="insurance-item"><div class="logo-placeholder">[Logo]</div>Aetna</div>
+      <div class="insurance-item"><div class="logo-placeholder">[Logo]</div>UnitedHealthcare</div>
+      <div class="insurance-item"><div class="logo-placeholder">[Logo]</div>Medicare Part D</div>
+      <div class="insurance-item"><div class="logo-placeholder">[Logo]</div>Medicaid</div>
+    </div>
+  </div>
+</section>
+
+<section id="refill" class="section-alt">
+  <div class="container">
+    <h2 class="section-title">Request a Refill</h2>
+    <p class="section-sub">Fast &amp; easy — we'll have it ready before you arrive.</p>
+    <div class="form-card">
+      <form onsubmit="alert('Refill request submitted! (Demo)'); return false;">
+        <label for="r-name">Full Name</label>
+        <input type="text" id="r-name" required placeholder="Jane Doe">
+        <label for="r-dob">Date of Birth</label>
+        <input type="date" id="r-dob" required>
+        <label for="r-med">Medication Name</label>
+        <input type="text" id="r-med" required placeholder="e.g. Metformin 500mg">
+        <label for="r-rx">Prescription # (if available)</label>
+        <input type="text" id="r-rx" placeholder="Rx-######">
+        <label for="r-phone">Phone Number</label>
+        <input type="tel" id="r-phone" required placeholder="(555) 123-4567">
+        <button type="submit" class="btn btn-primary">Submit Refill Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="transfer">
+  <div class="container">
+    <h2 class="section-title">Transfer a Prescription</h2>
+    <p class="section-sub">Switching to WellSpring is simple. We'll handle the rest.</p>
+    <div class="form-card">
+      <form onsubmit="alert('Transfer request submitted! (Demo)'); return false;">
+        <label for="t-name">Full Name</label>
+        <input type="text" id="t-name" required placeholder="Jane Doe">
+        <label for="t-dob">Date of Birth</label>
+        <input type="date" id="t-dob" required>
+        <label for="t-current">Current Pharmacy Name</label>
+        <input type="text" id="t-current" required placeholder="e.g. CVS on Main St">
+        <label for="t-current-phone">Current Pharmacy Phone</label>
+        <input type="tel" id="t-current-phone" required placeholder="(555) 987-6543">
+        <label for="t-meds">Medication(s) to Transfer</label>
+        <textarea id="t-meds" required placeholder="List the medications you'd like to transfer"></textarea>
+        <button type="submit" class="btn btn-accent">Submit Transfer Request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact &amp; Location</h2>
+    <p class="section-sub">Stop by, give us a call, or send a message.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>WellSpring Pharmacy</h3>
+        <p><span class="icon">📍</span> 123 Main Street, Suite A, [City], [State] [ZIP]</p>
+        <p><span class="icon">📞</span> (555) 123-4567</p>
+        <p><span class="icon">⏰</span> Mon–Fri: 8:00 AM – 7:00 PM &nbsp;|&nbsp; Sat: 9:00 AM – 4:00 PM &nbsp;|&nbsp; Sun: Closed</p>
+        <p><span class="icon">✉️</span> hello@wellspringpharmacy.com</p>
+        <div class="map-placeholder">[Google Maps Embed]</div>
+      </div>
+      <div class="form-card" style="margin:0">
+        <form onsubmit="alert('Message sent! (Demo)'); return false;">
+          <label for="c-name">Name</label>
+          <input type="text" id="c-name" required>
+          <label for="c-email">Email</label>
+          <input type="email" id="c-email" required>
+          <label for="c-msg">Message</label>
+          <textarea id="c-msg" required placeholder="How can we help?"></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>WellSpring Pharmacy</h4>
+        <p style="font-size:0.85rem">Your locally owned compounding pharmacy. Serving [City] with personalized care since [Year].</p>
+        <p style="font-size:0.85rem;margin-top:8px">📞 (555) 123-4567</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#refill">Refill Rx</a></li>
+          <li><a href="#transfer">Transfer Rx</a></li>
+          <li><a href="#insurance">Insurance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Patient Resources</h4>
+        <ul>
+          <li><a href="#">New Patient Forms</a></li>
+          <li><a href="#">Medication Guide</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>License</h4>
+        <ul>
+          <li><a href="#">Pharmacy Lic # [XXXXX]</a></li>
+          <li><a href="#">Compounding Accred.</a></li>
+          <li><a href="#">NPI #[XXXXXXXX]</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 WellSpring Pharmacy. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
