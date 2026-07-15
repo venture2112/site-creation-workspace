@@ -3,6 +3,15 @@
     { "source": "/about", "destination": "/about.html" },
     { "source": "/services", "destination": "/services.html" },
     { "source": "/gallery", "destination": "/gallery.html" },
-    { "source": "/contact", "destination": "/contact.html" }
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/pharmacy/about", "destination": "/pharmacy/about.html" },
+    { "source": "/pharmacy/services", "destination": "/pharmacy/services.html" },
+    { "source": "/pharmacy/contact", "destination": "/pharmacy/contact.html" },
+    { "source": "/veterinary/about", "destination": "/veterinary/about.html" },
+    { "source": "/veterinary/services", "destination": "/veterinary/services.html" },
+    { "source": "/veterinary/contact", "destination": "/veterinary/contact.html" },
+    { "source": "/contractor/about", "destination": "/contractor/about.html" },
+    { "source": "/contractor/services", "destination": "/contractor/services.html" },
+    { "source": "/contractor/contact", "destination": "/contractor/contact.html" }
   ]
 }

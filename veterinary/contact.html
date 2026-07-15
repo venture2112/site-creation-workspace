@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Paws &amp; Claws Veterinary Clinic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <svg class="logo__icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M16 4C12 4 8 8 8 12C8 16 12 18 16 20C20 18 24 16 24 12C24 8 20 4 16 4Z" fill="currentColor" opacity="0.8"/>
+          <circle cx="16" cy="22" r="6" fill="currentColor" opacity="0.6"/>
+        </svg>
+        <span class="logo__text">Paws &amp; Claws</span>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="services.html" class="nav__link">Services</a></li>
+          <li><a href="about.html" class="nav__link">Our Team</a></li>
+          <li><a href="contact.html" class="nav__link active">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn--primary header__cta">Book Appointment</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="subpage-hero">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li><a href="index.html">Home</a></li>
+          <li>Contact Us</li>
+        </ul>
+        <h1 class="subpage-hero__title">Contact Us</h1>
+        <p class="subpage-hero__subtitle">We'd love to hear from you. Reach out with questions, concerns, or to book an appointment.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+      <div class="container contact-grid">
+        <!-- Left: Form -->
+        <div class="contact-form reveal">
+          <h2 class="section__title">Get In Touch</h2>
+          <form id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required placeholder="John Smith">
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="john@example.com">
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
+            </div>
+            <div class="form-group">
+              <label for="petName">Pet's Name</label>
+              <input type="text" id="petName" name="petName" placeholder="Fluffy">
+            </div>
+            <div class="form-group">
+              <label for="petType">Pet Type</label>
+              <select id="petType" name="petType">
+                <option value="">Select…</option>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="bird">Bird</option>
+                <option value="rabbit">Rabbit</option>
+                <option value="reptile">Reptile</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="5" required placeholder="How can we help you and your pet?"></textarea>
+              <span class="form-error"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg">Send Message</button>
+            <div class="form-success" id="formSuccess" style="display:none;">
+              <p>Thank you! We'll get back to you within 24 hours.</p>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Info -->
+        <div class="contact-info reveal">
+          <div class="contact-info__card">
+            <h3>Clinic Information</h3>
+            <div class="contact-info__item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 0C6.13 0 3 3.13 3 7c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="currentColor"/></svg>
+              <div>
+                <strong>Address</strong>
+                <p>123 Pet Care Lane, Suite 200<br>Anytown, ST 12345</p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M20 18.35V19a1 1 0 01-1 1A18 18 0 010 2a1 1 0 011-1h4a1 1 0 011 1c0 1.38.22 2.71.63 3.95a1 1 0 01-.23 1.06L5.7 7.7a14.91 14.91 0 006.6 6.6l1.69-1.69a1 1 0 011.06-.23c1.24.41 2.57.63 3.95.63a1 1 0 011 1v3.94z" fill="currentColor"/></svg>
+              <div>
+                <strong>Phone</strong>
+                <p><a href="tel:+15551234567">(555) 123-4567</a></p>
+              </div>
+            </div>
+            <div class="contact-info__item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M18 2H2C.89 2 0 2.89 0 4v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2zm0 4l-8 5-8-5V4l8 5 8-5v2z" fill="currentColor"/></svg>
+              <div>
+                <strong>Email</strong>
+                <p><a href="mailto:hello@pawsandclaws.com">hello@pawsandclaws.com</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info__card">
+            <h3>Hours of Operation</h3>
+            <table class="hours-table">
+              <tr><td>Mon – Fri</td><td>8:00 AM – 6:00 PM</td></tr>
+              <tr><td>Saturday</td><td>9:00 AM – 3:00 PM</td></tr>
+              <tr><td>Sunday</td><td>Emergency Only</td></tr>
+            </table>
+          </div>
+
+          <div class="contact-info__card contact-info__emergency">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L1 21h22L12 2zm0 3l8 14H4l8-14zm-1 8h2v2h-2zm0-6h2v5h-2z" fill="currentColor"/></svg>
+            <div>
+              <strong>Emergency?</strong>
+              <p>If this is an emergency, please call us immediately at <a href="tel:+15551234567">(555) 123-4567</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="section section--dark">
+      <div class="container">
+        <h2 class="section__title">Find Us</h2>
+        <div class="map-placeholder reveal">
+          <div class="map-placeholder__inner">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" fill="currentColor" opacity="0.4"/></svg>
+            <p>Interactive Map — Replace with Google Maps embed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social CTA -->
+    <section class="section section--accent">
+      <div class="container text-center">
+        <h2 class="section__title">Follow Us</h2>
+        <p class="section__subtitle">Stay connected with us on social media for pet care tips, clinic updates, and adorable pet photos!</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h4>Paws &amp; Claws</h4>
+          <p>Compassionate, high-quality veterinary care for your beloved pets. Serving the community for over 15 years.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Wellness Care</a></li>
+            <li><a href="services.html">Surgery</a></li>
+            <li><a href="services.html">Dentistry</a></li>
+            <li><a href="services.html">Emergency Care</a></li>
+            <li><a href="services.html">Pharmacy</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Patient Resources</h4>
+          <ul>
+            <li><a href="#">New Patient Forms</a></li>
+            <li><a href="#">Pet Health Library</a></li>
+            <li><a href="#">Vaccination Schedule</a></li>
+            <li><a href="#">Online Pharmacy</a></li>
+            <li><a href="#">Records Request</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <p>123 Pet Care Lane, Suite 200<br>Anytown, ST 12345</p>
+          <p>(555) 123-4567</p>
+          <p>hello@pawsandclaws.com</p>
+          <p class="footer__hours"><strong>Hours:</strong> Mon–Fri 8–6, Sat 9–3</p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Paws &amp; Claws Veterinary Clinic. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

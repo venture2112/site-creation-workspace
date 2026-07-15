@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Industrial Trades for commercial HVAC, plumbing, and electrical services. Submit an RFQ or call our 24/7 emergency line.">
+  <title>Contact Us — Industrial Trades | Commercial HVAC, Plumbing & Electrical</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙</text></svg>">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Industrial Trades Home">
+        <span class="logo-icon">⚙</span>
+        Industrial<span>Trades</span>
+      </a>
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="btn btn-secondary btn-sm">Get a Quote</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-overlay"></div>
+  </header>
+
+  <!-- ===== SUBPAGE HERO ===== -->
+  <section class="subpage-hero" role="region" aria-label="Page header">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span class="current">Contact</span>
+      </div>
+      <h1>Get in Touch</h1>
+      <p>Ready to start a project? Need emergency service? Fill out the form below or call us directly. We respond to all inquiries within one business hour.</p>
+    </div>
+  </section>
+
+  <!-- ===== EMERGENCY HOTLINE ===== -->
+  <section style="background:var(--color-danger);padding:1.25rem 0;">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <span style="font-size:2rem;">🚨</span>
+        <div>
+          <h4 style="color:var(--color-white);margin-bottom:0.125rem;">Emergency Hotline — Available 24/7/365</h4>
+          <p style="color:rgba(255,255,255,0.85);margin:0;font-size:0.875rem;">Immediate dispatch for critical HVAC, plumbing, and electrical emergencies</p>
+        </div>
+      </div>
+      <a href="tel:+15551234567" style="font-family:var(--font-heading);font-size:1.75rem;font-weight:800;color:var(--color-white);white-space:nowrap;">(555) 123-4567</a>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left: Form -->
+        <div>
+          <span class="section-label">Submit an RFQ</span>
+          <h2 class="section-title" style="margin-bottom:1.5rem;">Request a Quote or Service</h2>
+
+          <div class="form-success" id="formSuccess">
+            <h4>✓ Request Submitted Successfully</h4>
+            <p>Thank you for contacting Industrial Trades. A project manager will reach out within one business hour to discuss your needs.</p>
+          </div>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="company">Company Name *</label>
+                <input class="form-input" type="text" id="company" name="company" required placeholder="e.g. Acme Corporation">
+                <div class="form-error"></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="name">Contact Name *</label>
+                <input class="form-input" type="text" id="name" name="name" required placeholder="e.g. Jane Smith">
+                <div class="form-error"></div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address *</label>
+                <input class="form-input" type="email" id="email" name="email" required placeholder="you@company.com">
+                <div class="form-error"></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number *</label>
+                <input class="form-input" type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+                <div class="form-error"></div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="serviceType">Service Type *</label>
+                <select class="form-select" id="serviceType" name="serviceType" required>
+                  <option value="">Select a service...</option>
+                  <option value="hvac">HVAC — Installation</option>
+                  <option value="hvac-maintenance">HVAC — Preventative Maintenance</option>
+                  <option value="hvac-repair">HVAC — Emergency Repair</option>
+                  <option value="hvac-automation">HVAC — Building Automation</option>
+                  <option value="plumbing">Plumbing — Commercial Piping</option>
+                  <option value="plumbing-drain">Plumbing — Drain Cleaning</option>
+                  <option value="plumbing-backflow">Plumbing — Backflow Prevention</option>
+                  <option value="plumbing-grease">Plumbing — Grease Traps</option>
+                  <option value="electrical">Electrical — Panel Upgrades</option>
+                  <option value="electrical-lighting">Electrical — Lighting Design</option>
+                  <option value="electrical-generator">Electrical — Emergency Generators</option>
+                  <option value="electrical-data">Electrical — Data Cabling</option>
+                  <option value="electrical-fire">Electrical — Fire Alarm Systems</option>
+                  <option value="other">Other / Multiple Trades</option>
+                </select>
+                <div class="form-error"></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="budget">Estimated Budget</label>
+                <select class="form-select" id="budget" name="budget">
+                  <option value="">Select a range...</option>
+                  <option value="under-5k">Under $5,000</option>
+                  <option value="5k-25k">$5,000 – $25,000</option>
+                  <option value="25k-100k">$25,000 – $100,000</option>
+                  <option value="100k-500k">$100,000 – $500,000</option>
+                  <option value="over-500k">Over $500,000</option>
+                  <option value="unknown">Not Sure / To Be Determined</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Project Description *</label>
+              <textarea class="form-textarea" id="message" name="message" required placeholder="Describe your project, facility type, square footage, and any specific challenges or requirements..."></textarea>
+              <div class="form-error"></div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="preferredTime">Preferred Contact Time</label>
+                <select class="form-select" id="preferredTime" name="preferredTime">
+                  <option value="anytime">Anytime</option>
+                  <option value="morning">Morning (8am – 12pm)</option>
+                  <option value="afternoon">Afternoon (12pm – 5pm)</option>
+                  <option value="evening">Evening (5pm – 8pm)</option>
+                </select>
+              </div>
+              <div class="form-group" style="display:flex;align-items:flex-end;">
+                <button type="submit" class="btn btn-secondary" style="width:100%;justify-content:center;">Submit RFQ</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Contact Info -->
+        <div>
+          <div class="contact-info-card">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">📍</div>
+              <div class="contact-info-text">
+                <h4>Office Location</h4>
+                <p>2400 Industrial Parkway, Suite 100<br>Portland, OR 97210</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">📞</div>
+              <div class="contact-info-text">
+                <h4>Phone</h4>
+                <p>Main: <a href="tel:+15551234567" style="color:var(--color-steel-blue);font-weight:600;">(555) 123-4567</a><br>Emergency: <a href="tel:+15551234567" style="color:var(--color-danger);font-weight:600;">(555) 123-4567</a></p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">✉️</div>
+              <div class="contact-info-text">
+                <h4>Email</h4>
+                <p><a href="mailto:info@industrialtrades.com" style="color:var(--color-steel-blue);">info@industrialtrades.com</a><br>Estimating: <a href="mailto:estimating@industrialtrades.com" style="color:var(--color-steel-blue);">estimating@industrialtrades.com</a></p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">🕐</div>
+              <div class="contact-info-text">
+                <h4>Office Hours</h4>
+                <p>Monday – Friday: 7:00 AM – 5:00 PM<br>Saturday: 8:00 AM – 12:00 PM<br>Sunday: Closed (Emergency Service Only)</p>
+              </div>
+            </div>
+            <div class="contact-info-item" style="margin-bottom:0;padding-bottom:0;border-bottom:none;">
+              <div class="contact-info-icon">🛡️</div>
+              <div class="contact-info-text">
+                <h4>Licenses</h4>
+                <p>GC #GC-123456 | Electrical #EL-789012<br>Plumbing #PL-345678 | EPA #EPA-567890</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Area -->
+          <div style="margin-top:2rem;">
+            <h4 style="margin-bottom:0.75rem;">Service Area</h4>
+            <p style="font-size:0.875rem;color:var(--color-gray-mid);margin-bottom:0.5rem;">We serve the greater Portland metropolitan area and surrounding counties:</p>
+            <ul class="service-area-list" style="margin-top:0;">
+              <li>Portland</li>
+              <li>Beaverton</li>
+              <li>Hillsboro</li>
+              <li>Gresham</li>
+              <li>Vancouver</li>
+              <li>Lake Oswego</li>
+              <li>Tigard</li>
+              <li>Oregon City</li>
+              <li>Clackamas</li>
+              <li>Happy Valley</li>
+              <li>Tualatin</li>
+              <li>Wilsonville</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map-placeholder reveal">
+        <span style="font-size:2rem;">🗺️</span>
+        <p style="color:var(--color-gray);">Interactive Map — 2400 Industrial Parkway, Portland, OR 97210</p>
+        <p style="font-size:0.75rem;color:var(--color-gray-mid);">Map integration placeholder</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-banner" role="region" aria-label="Call to action">
+    <div class="container">
+      <div class="cta-content">
+        <span class="section-label yellow">Prefer to Call?</span>
+        <h2>We're Ready When You Are</h2>
+        <p>Call us anytime to speak with a project manager. For emergencies, our dispatch team is standing by 24/7.</p>
+        <a href="tel:+15551234567" class="cta-phone">(555) 123-4567</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo" style="margin-bottom:1rem;">
+            <span class="logo-icon">⚙</span>
+            Industrial<span>Trades</span>
+          </a>
+          <p>Industrial Trades is a premier commercial HVAC, plumbing, and electrical contractor serving the greater metropolitan area since 1998. We deliver mission-critical reliability for commercial facilities of every size.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="index.html#projects">Project Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>HVAC Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#hvac">Installation</a></li>
+            <li><a href="services.html#hvac">Preventative Maintenance</a></li>
+            <li><a href="services.html#hvac">Emergency Repair</a></li>
+            <li><a href="services.html#hvac">Building Automation</a></li>
+            <li><a href="services.html#hvac">Indoor Air Quality</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Plumbing Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#plumbing">Commercial Piping</a></li>
+            <li><a href="services.html#plumbing">Backflow Prevention</a></li>
+            <li><a href="services.html#plumbing">Drain Cleaning</a></li>
+            <li><a href="services.html#plumbing">Grease Traps</a></li>
+            <li><a href="services.html#plumbing">Sewer Lines</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Electrical Services</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#electrical">Panel Upgrades</a></li>
+            <li><a href="services.html#electrical">Lighting Design</a></li>
+            <li><a href="services.html#electrical">Emergency Generators</a></li>
+            <li><a href="services.html#electrical">Fire Alarm Systems</a></li>
+            <li><a href="services.html#electrical">Data Cabling</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-license">
+        <p>General Contractor License #GC-123456 | Electrical License #EL-789012 | Plumbing License #PL-345678</p>
+        <p>© <span id="year">2026</span> Industrial Trades, Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
