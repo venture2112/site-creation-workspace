@@ -291,7 +291,7 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
   min-height: 90vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), url('https://picsum.photos/seed/industrial-hero/1920/800');
+  background: linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.8)), url('https://images.unsplash.com/photo-1690473768476-44b5cebb7d80?w=1920&q=80');
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -658,7 +658,7 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
 
 /* ============ CTA BANNER ============ */
 .cta-banner {
-  background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)), url('https://picsum.photos/seed/contractor-cta/1920/600');
+  background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)), url('https://images.unsplash.com/photo-1690473768476-44b5cebb7d80?w=1920&q=80');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -746,7 +746,7 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
 
 /* ============ SUBPAGE HERO ============ */
 .subpage-hero {
-  background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)), url('https://picsum.photos/seed/contractor-subpage/1920/600');
+  background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)), url('https://images.unsplash.com/photo-1690473768476-44b5cebb7d80?w=1920&q=80');
   background-size: cover;
   background-position: center;
   padding: 5rem 0 3.5rem;
@@ -1172,7 +1172,7 @@ p { font-size: 1rem; color: var(--color-gray-dark); margin-bottom: 1rem; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(220,38,38,0.92), rgba(220,38,38,0.92)), url('https://picsum.photos/seed/emergency-response/1920/200');
+  background: linear-gradient(rgba(220,38,38,0.92), rgba(220,38,38,0.92)), url('https://images.unsplash.com/photo-1690473768476-44b5cebb7d80?w=1920&q=80');
   background-size: cover;
   background-position: center;
   z-index: 1;
