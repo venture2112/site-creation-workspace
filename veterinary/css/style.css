@@ -522,7 +522,7 @@ h5 { font-size: 1.1rem; }
 .subpage-hero {
   position: relative;
   padding: 100px 0 60px;
-  background: linear-gradient(rgba(26,26,46,0.55), rgba(26,26,46,0.55)), url('https://images.unsplash.com/photo-1700665537604-412e89a285c3?w=1920&q=80');
+  background: linear-gradient(rgba(26,26,46,0.55), rgba(26,26,46,0.55)), url('https://images.unsplash.com/photo-1644675272883-0c4d582528d8?w=1920&q=80');
   background-size: cover;
   background-position: center;
   overflow: hidden;
