@@ -432,7 +432,7 @@ h5 { font-size: 1.1rem; }
   min-height: 85vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(rgba(26,26,46,0.5), rgba(26,26,46,0.5)), url('https://images.unsplash.com/photo-1700665537604-412e89a285c3?w=1920&q=80');
+  background: linear-gradient(rgba(26,26,46,0.5), rgba(26,26,46,0.5)), url('https://images.unsplash.com/photo-1644675272883-0c4d582528d8?w=1920&q=80');
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -504,7 +504,7 @@ h5 { font-size: 1.1rem; }
 @media (max-width: 768px) {
   .hero {
     min-height: 70vh;
-    padding: 100px 0 60px;
+padding: 140px 0 100px;
   }
   .hero-buttons {
     flex-direction: column;
@@ -1062,7 +1062,7 @@ h5 { font-size: 1.1rem; }
 /* ----- CTA Section ----- */
 .cta-section {
   padding: 100px 0;
-  background: linear-gradient(rgba(15,118,110,0.65), rgba(11,94,87,0.65)), url('https://images.unsplash.com/photo-1700665537604-412e89a285c3?w=1920&q=80');
+  background: linear-gradient(rgba(15,118,110,0.65), rgba(11,94,87,0.65)), url('https://images.unsplash.com/photo-1644675272883-0c4d582528d8?w=1920&q=80');
   background-size: cover;
   background-position: center;
   position: relative;
