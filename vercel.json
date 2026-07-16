@@ -7,6 +7,7 @@
     { "source": "/pharmacy/about", "destination": "/pharmacy/about.html" },
     { "source": "/pharmacy/services", "destination": "/pharmacy/services.html" },
     { "source": "/pharmacy/contact", "destination": "/pharmacy/contact.html" },
+    { "source": "/veterinary/resources", "destination": "/veterinary/resources.html" },
     { "source": "/veterinary/about", "destination": "/veterinary/about.html" },
     { "source": "/veterinary/services", "destination": "/veterinary/services.html" },
     { "source": "/veterinary/contact", "destination": "/veterinary/contact.html" },
