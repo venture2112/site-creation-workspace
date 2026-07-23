@@ -13,6 +13,7 @@
     { "source": "/veterinary/contact", "destination": "/veterinary/contact.html" },
     { "source": "/contractor/about", "destination": "/contractor/about.html" },
     { "source": "/contractor/services", "destination": "/contractor/services.html" },
-    { "source": "/contractor/contact", "destination": "/contractor/contact.html" }
+    { "source": "/contractor/contact", "destination": "/contractor/contact.html" },
+    { "source": "/qeb-preview/:path*", "destination": "/qeb-preview/:path*" }
   ]
 }
